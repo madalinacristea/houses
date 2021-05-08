@@ -7,7 +7,15 @@ function Appointment(props) {
     const [isBooked, setIsBooked] = useState(false);
     const sendSMS = () => {
         async function doSMS() {
-            let payload={msg:document.getElementById("msg").value,tel:document.getElementById("tel").value, id:props.id}
+            let payload={
+              id:props.id,
+              name:document.getElementById("name").value,
+              tel:document.getElementById("tel").value, 
+              email:document.getElementById("email").value,
+              time:document.getElementById("time").value,
+              date:document.getElementById("date").value,
+              msg:document.getElementById("msg").value
+              }
             console.log (payload)
             let response = await fetch("http://localhost:3001/sms", {
                 method: "POST", body: JSON.stringify(payload), headers: {
@@ -21,7 +29,8 @@ function Appointment(props) {
     if (isOpen) {
         return (
             <div>
-                <label>Preferred date:</label><DatePicker selected={startDate} onChange={date => setStartDate(date)} /><br />
+                <label>Name:</label><input id='name' type='text'></input><br />
+                <label>Preferred date:</label><DatePicker selected={startDate} id='date' onChange={date => setStartDate(date)} /><br />
                 <label>Preferred time:</label><input id='time' type='text'></input><br />
                 <label>Contact email:</label><input id='email' type='text'></input><br />
                 <label>Contact phone:</label><input id='tel' type='text'></input><br />

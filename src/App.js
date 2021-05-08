@@ -24,7 +24,7 @@ function App() {
     <div className="App">
       
       
-      {houses.map(h=><Tile price={h.price} area={h.area} image={h.image} type={h.type} id={h.key}/>)}
+      {houses.map(h=><Tile price={h.price} area={h.area} image={h.image} type={h.type} id={h.id} key={h.id}/>)}
     </div>
   );
 }

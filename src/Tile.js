@@ -9,7 +9,7 @@ function Tile(props) {
           {props.area} {props.price} {props.type}
         </h1>
         <img alt="" src={props.image} />
-        <Appointment />
+        <Appointment id={props.id} />
         <button
           onClick={() => {
             setView(false);

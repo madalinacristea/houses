@@ -29,9 +29,13 @@ app.get("/houses", (req, res) => {
 });
 
 app.post("/sms", (req, res) => {
-  let msg = `Hello! We would like to make a booking for ${req.body.id}  ${req.body.msg}  ${req.body.time}` 
-  sendSMS(msg, req.body.tel)
-  sendSMS(msg, req.body.tel)
+  let msg = 
+  `Hello! ${req.body.name} wants to book viewing for house ${req.body.id} on ${req.body.date} at ${req.body.time}. 
+  Contact details: ${req.body.email} ${req.body.tel}.
+  Notes: ${req.body.msg}` 
+  sendSMS(msg, '07388620990') //agent number
+  let cust_msg = `We have received your request for ${req.body.id} booking. We will come back to you shortly with the confirmation of booking.`
+  sendSMS(cust_msg, req.body.tel)//customer number
   res.type('application/json')
   res.send(JSON.stringify( "OK" ));
 });
@@ -57,7 +61,7 @@ const sendApiMessage = function(endpoint, messageArgs, callback) {
 var endpoint = 'sendsms';
 var urlArgs = {
     'apiKey' : apiKey,
-    'to' : '447388620990',
+    'to' : phoneNumber,
     'from' : 'Firetext',
     'message' : msg
 };
