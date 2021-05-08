@@ -18,6 +18,9 @@ let houses=[]
 houses.push({id:"1", price:27500,area:"Handsworth",type:"Flat",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/108k/107051/78903606/107051_RS0730_IMG_11_0000_max_476x317.jpeg`})
 houses.push({id:"2", price:1450000,area:"Harbourne",type:"House",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/93k/92029/104484854/92029_581009_IMG_00_0000_max_476x317.jpeg`})
 houses.push({id:"3", price:165000,area:"Edgbaston",type:"Maisonette",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/73k/72455/97846952/72455_107VC_IMG_00_0000_max_476x317.jpg`})
+houses.push({id:"4", price:210000,area:"Droitwich",type:"House",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/82k/81089/106335083/81089_DSS210050_IMG_00_0000_max_476x317.jpeg`})
+houses.push({id:"5", price:300000,area:"Worcester",type:"House",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/23k/22403/106646495/22403_30630734_IMG_00_0000_max_476x317.jpeg`})
+houses.push({id:"6", price:265000,area:"Worcester",type:"Flat",image:`https://media.rightmove.co.uk/dir/crop/10:9-16:9/229k/228635/106602194/228635_816014_IMG_00_0000_max_476x317.jpeg`}
 
 
 //app.use(express.urlencoded({ extended: true }));
