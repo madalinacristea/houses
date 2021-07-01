@@ -15,6 +15,7 @@ function App() {
     async function fetchHouses(){        
         let response = await fetch(server + "/houses")      
         fillHouses( await response.json()) 
+        console.log(houses)
   //      loaded(true) //invoking the 'loaded' 'setter' function will trigger a refresh of the component        
     }
     fetchHouses()
